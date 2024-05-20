@@ -57,7 +57,7 @@ class UserCors extends HandleCors
 
 `audunru\DynamicCors\Middleware\HandleCors` has protected properties for `allowed_origins` and all the other CORS service settings. Any properties that you set in your middleware will be used by the CORS service. Properties that you don't set will use the value set in `cors.php`.
 
-5. Add `\App\Http\Middleware\HandleCors::class` to the middleware stack.
+4. Add `\App\Http\Middleware\HandleCors::class` to the middleware stack.
 
 # Development
 
