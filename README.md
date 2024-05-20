@@ -4,7 +4,15 @@
 [![Coverage Status](https://coveralls.io/repos/github/audunru/dynamic-cors/badge.svg?branch=main)](https://coveralls.io/github/audunru/dynamic-cors?branch=main)
 [![StyleCI](https://github.styleci.io/repos/803402577/shield?branch=main)](https://github.styleci.io/repos/803402577)
 
-Dynamically change Laravel's CORS options. Typically used to configure custom allowed origins per user/account, so that your users can access you applications HTTP API's without CORS errors.
+Typically used to configure custom allowed origins per user/account, so that your users can access your HTTP API from different domains without getting CORS errors.
+
+Under the hood, this middleware dynamically sets Laravel's default CORS configuration options. Basically, it's a wrapper for calls like...
+
+```php
+config("cors.allowed_origins", ["https://www.example.com"]);
+```
+
+... where the list of of allowed origins would dynamically change, for example come from the user's account settings.
 
 # Installation
 
@@ -20,7 +28,7 @@ You will have to replace Laravel's default `HandleCors` middleware with a versio
 
 3. Create a new file `app/Http/Middleware/UserCors.php`.
 
-You can place this wherever you want, and of course name it according to what _you_ want it to do!
+You can place this wherever you want, and of course name it according to what it does in your application.
 
 This is an example where a user has a list of per-user allowed origins, perhaps controlled by themselves in the application UI.
 
@@ -39,7 +47,7 @@ class UserCors extends HandleCors
 
         $this->allowed_origins = array_merge(
             [config('app.url')],
-            $user->allowed_origins
+            $user->allowed_origins // Note: allowed_origins does not exist by default, it's something you would have to create. Or make something completely different
         );
 
         return parent::handle($request, $next);
