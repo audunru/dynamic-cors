@@ -8,13 +8,9 @@ Dynamically change Laravel's CORS options. Typically used to configure custom al
 
 # Installation
 
-## Step 1: Install with Composer
-
 ```bash
 composer require audunru/dynamic-cors
 ```
-
-# Configuration
 
 You will have to replace Laravel's default `HandleCors` middleware with a version that extends `audunru\DynamicCors\Middleware\HandleCors`.
 
