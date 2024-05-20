@@ -1,0 +1,62 @@
+{
+  "name": "audunru/dynamic-cors",
+  "description": "Dynamically change CORS options in Laravel",
+  "keywords": [
+    "cors",
+    "laravel"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Audun Rundberg",
+      "email": "audun@rundberg.no"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "laravel/framework": "^11.0",
+    "spatie/laravel-package-tools": "^1.9"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.0",
+    "orchestra/testbench": "^9.0",
+    "php-coveralls/php-coveralls": "^2.2",
+    "phpmd/phpmd": "^2.10",
+    "phpunit/phpunit": "^11.0",
+    "roave/security-advisories": "dev-latest"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "audunru\\DynamicCors\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "audunru\\DynamicCors\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": [
+      "php ./vendor/bin/phpunit"
+    ],
+    "test-with-coverage": [
+      "XDEBUG_MODE=coverage php ./vendor/bin/phpunit --coverage-clover build/logs/clover.xml"
+    ],
+    "fix": [
+      "php ./vendor/bin/php-cs-fixer fix --config .php-cs-fixer.dist.php"
+    ],
+    "verify": [
+      "php ./vendor/bin/php-cs-fixer fix --config .php-cs-fixer.dist.php --dry-run",
+      "php ./vendor/bin/phpmd config,src,tests ansi phpmd-ruleset.xml",
+      "XDEBUG_MODE=coverage php ./vendor/bin/phpunit --coverage-clover build/logs/clover.xml"
+    ]
+  }
+}

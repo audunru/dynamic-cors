@@ -1,0 +1,5 @@
+/vendor/
+*.cache
+build/logs/clover.xml
+.DS_Store
+.vscode
