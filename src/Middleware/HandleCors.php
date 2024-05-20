@@ -5,6 +5,9 @@ namespace audunru\DynamicCors\Middleware;
 use Closure;
 use Illuminate\Http\Middleware\HandleCors as MiddlewareHandleCors;
 
+/**
+ * @SuppressWarnings(PHPMD.LongVariable)
+ */
 abstract class HandleCors extends MiddlewareHandleCors
 {
     private const PATHS_KEY = 'cors.paths';
@@ -18,74 +21,58 @@ abstract class HandleCors extends MiddlewareHandleCors
 
     /**
      * Paths determine if the CORS service should run.
-     *
-     * @var array|null
      */
-    protected $paths;
+    protected ?array $paths;
 
     /**
      * The Access-Control-Allow-Methods response header specifies one or more methods allowed
      * when accessing a resource in response to a preflight request.
      * https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods.
-     *
-     * @var array|null
      */
-    protected $allowed_methods;
+    protected ?array $allowedMethods;
 
     /**
      * The Access-Control-Allow-Origin response header indicates whether the response can be
      * shared with requesting code from the given origin.
      * https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin.
-     *
-     * @var array|null
      */
-    protected $allowed_origins;
+    protected ?array $allowedOrigins;
 
     /**
      * Same as $allowed_origins, but uses regex patterns to make the match.
-     *
-     * @var array|null
      */
-    protected $allowed_origins_patterns;
+    protected ?array $allowedOriginsPatterns;
 
     /**
      * The Access-Control-Allow-Headers response header is used in response to a preflight
      * request which includes the Access-Control-Request-Headers to indicate which HTTP
      * headers can be used during the actual request.
      * https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers.
-     *
-     * @var array|null
      */
-    protected $allowed_headers;
+    protected ?array $allowedHeaders;
 
     /**
      * The Access-Control-Expose-Headers response header allows a server to indicate which
      * response headers should be made available to scripts running in the browser, in
      * response to a cross-origin request.
      * https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Expose-Headers.
-     *
-     * @var array|null
      */
-    protected $exposed_headers;
+    protected ?array $exposedHeaders;
 
     /**
      * The Access-Control-Max-Age response header indicates how long the results of a preflight
      * request (that is the information contained in the Access-Control-Allow-Methods and
      * Access-Control-Allow-Headers headers) can be cached.
      * https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Max-Age.
-     *
-     * @var int|null
      */
-    protected $max_age;
+    protected ?int $maxAge;
 
     /**
      * The Access-Control-Allow-Credentials response header tells browsers whether the server
      * allows cross-origin HTTP requests to include credentials.
      * https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials.
-     *
-     * @var bool|null
      */
-    protected $supports_credentials;
+    protected ?bool $supportsCredentials;
 
     public function handle($request, Closure $next)
     {
@@ -117,36 +104,36 @@ abstract class HandleCors extends MiddlewareHandleCors
 
     private function getAllowedMethods(): array
     {
-        return $this->allowed_methods ?? config(self::ALLOWED_METHODS_KEY);
+        return $this->allowedMethods ?? config(self::ALLOWED_METHODS_KEY);
     }
 
     private function getAllowedOrigins(): array
     {
-        return $this->allowed_origins ?? config(self::ALLOWED_ORIGINS_KEY);
+        return $this->allowedOrigins ?? config(self::ALLOWED_ORIGINS_KEY);
     }
 
     private function getAllowedOriginsPatterns(): array
     {
-        return $this->allowed_origins_patterns ?? config(self::ALLOWED_ORIGINS_PATTERNS_KEY);
+        return $this->allowedOriginsPatterns ?? config(self::ALLOWED_ORIGINS_PATTERNS_KEY);
     }
 
     private function getAllowedHeaders(): array
     {
-        return $this->allowed_headers ?? config(self::ALLOWED_HEADERS_KEY);
+        return $this->allowedHeaders ?? config(self::ALLOWED_HEADERS_KEY);
     }
 
     private function getExposedHeaders(): array
     {
-        return $this->exposed_headers ?? config(self::EXPOSED_HEADERS_KEY);
+        return $this->exposedHeaders ?? config(self::EXPOSED_HEADERS_KEY);
     }
 
     private function getMaxAge(): int
     {
-        return $this->max_age ?? config(self::MAX_AGE_KEY);
+        return $this->maxAge ?? config(self::MAX_AGE_KEY);
     }
 
     private function getSupportsCredentials(): bool
     {
-        return $this->supports_credentials ?? config(self::SUPPORTS_CREDENTIALS_KEY);
+        return $this->supportsCredentials ?? config(self::SUPPORTS_CREDENTIALS_KEY);
     }
 }

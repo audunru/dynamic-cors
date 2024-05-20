@@ -8,13 +8,9 @@ Dynamically change Laravel's CORS options. Typically used to configure custom al
 
 # Installation
 
-## Step 1: Install with Composer
-
 ```bash
 composer require audunru/dynamic-cors
 ```
-
-# Configuration
 
 You will have to replace Laravel's default `HandleCors` middleware with a version that extends `audunru\DynamicCors\Middleware\HandleCors`.
 
@@ -25,6 +21,8 @@ You will have to replace Laravel's default `HandleCors` middleware with a versio
 3. Create a new file `app/Http/Middleware/UserCors.php`.
 
 You can place this wherever you want, and of course name it according to what _you_ want it to do!
+
+This is an example where a user has a list of per-user allowed origins, perhaps controlled by themselves in the application UI.
 
 ```php
 
@@ -41,7 +39,7 @@ class UserCors extends HandleCors
 
         $this->allowed_origins = array_merge(
             [config('app.url')],
-            $user->allowed_origins // $user->allowed_origins is a hypothetical list of per-user allowed origins
+            $user->allowed_origins
         );
 
         return parent::handle($request, $next);
