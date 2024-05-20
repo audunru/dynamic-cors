@@ -2,7 +2,7 @@
 
 [![Build Status](https://github.com/audunru/dynamic-cors/actions/workflows/validate.yml/badge.svg)](https://github.com/audunru/dynamic-cors/actions/workflows/validate.yml)
 [![Coverage Status](https://coveralls.io/repos/github/audunru/dynamic-cors/badge.svg?branch=master)](https://coveralls.io/github/audunru/dynamic-cors?branch=master)
-[![StyleCI](https://github.styleci.io/repos/448512424/shield?branch=master)](https://github.styleci.io/repos/448512424)
+[![StyleCI](https://github.styleci.io/repos/803402577/shield?branch=master)](https://github.styleci.io/repos/803402577)
 
 Dynamically change Laravel's CORS options. Typically used to configure custom allowed origins per user/account, so that your users can access you applications HTTP API's without CORS errors.
 
