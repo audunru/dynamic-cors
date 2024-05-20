@@ -56,7 +56,7 @@
     "verify": [
       "php ./vendor/bin/php-cs-fixer fix --config .php-cs-fixer.dist.php --dry-run",
       "php ./vendor/bin/phpmd src,tests ansi phpmd-ruleset.xml",
-      "XDEBUG_MODE=coverage php ./vendor/bin/phpunit --coverage-clover build/logs/clover.xml"
+      "php ./vendor/bin/phpunit"
     ]
   }
 }
