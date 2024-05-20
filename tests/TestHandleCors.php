@@ -4,13 +4,16 @@ namespace audunru\DynamicCors\Tests;
 
 use audunru\DynamicCors\Middleware\HandleCors;
 
+/**
+ * @SuppressWarnings(PHPMD.LongVariable)
+ */
 class TestHandleCors extends HandleCors
 {
-    protected $allowed_methods = ['GET'];
-    protected $allowed_origins = ['https://www.example.com'];
-    protected $allowed_origins_patterns = ['/examples?\.com/'];
-    protected $allowed_headers = ['X-Allowed-Header'];
-    protected $exposed_headers = ['X-Exposed-Header'];
-    protected $max_age = 123;
-    protected $supports_credentials = true;
+    protected ?array $allowedMethods = ['GET'];
+    protected ?array $allowedOrigins = ['https://www.example.com'];
+    protected ?array $allowedOriginsPatterns = ['/examples?\.com/'];
+    protected ?array $allowedHeaders = ['X-Allowed-Header'];
+    protected ?array $exposedHeaders = ['X-Exposed-Header'];
+    protected ?int $maxAge = 123;
+    protected ?bool $supportsCredentials = true;
 }
