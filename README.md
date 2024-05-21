@@ -45,9 +45,9 @@ class UserCors extends HandleCors
     {
         $user = Auth::user();
 
-        $this->allowed_origins = array_merge(
+        $this->allowedOrigins = array_merge(
             [config('app.url')],
-            $user->allowed_origins // Note: allowed_origins does not exist by default, it's something you would have to create. Or make something completely different
+            $user->allowedOrigins // Note: allowedOrigins does not exist by default, it's something you would have to create. Or make something completely different
         );
 
         return parent::handle($request, $next);
@@ -55,7 +55,7 @@ class UserCors extends HandleCors
 }
 ```
 
-`audunru\DynamicCors\Middleware\HandleCors` has protected properties for `allowed_origins` and all the other CORS service settings. Any properties that you set in your middleware will be used by the CORS service. Properties that you don't set will use the value set in `cors.php`.
+`audunru\DynamicCors\Middleware\HandleCors` has protected properties for `allowedOrigins` and all the other CORS service settings. Any properties that you set in your middleware will be used by the CORS service. Properties that you don't set will use the value set in `cors.php`.
 
 4. Add `\App\Http\Middleware\HandleCors::class` to the middleware stack.
 
