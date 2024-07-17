@@ -14,7 +14,7 @@ class HandleCorsTest extends TestCase
                 'Access-Control-Request-Method' => 'GET',
             ])->options('/api/test');
 
-        $response->assertStatus(204)
+        $response->assertNoContent()
             ->assertHeader('Access-Control-Allow-Methods', 'GET')
             ->assertHeader('Access-Control-Allow-Origin', 'https://www.example.com')
             ->assertHeader('Access-Control-Allow-Headers', 'x-allowed-header')
@@ -29,7 +29,7 @@ class HandleCorsTest extends TestCase
                 'Origin' => 'https://www.examples.com',
             ])->get('/api/test');
 
-        $response->assertStatus(200)
+        $response->assertOk()
             ->assertHeader('Access-Control-Allow-Origin', 'https://www.examples.com');
     }
 
@@ -40,7 +40,7 @@ class HandleCorsTest extends TestCase
                 'Origin' => 'https://www.examples.com',
             ])->get('/api/test');
 
-        $response->assertStatus(200)
+        $response->assertOk()
             ->assertHeader('Access-Control-Expose-Headers', 'X-Exposed-Header');
     }
 }
