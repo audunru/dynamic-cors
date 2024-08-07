@@ -3,6 +3,7 @@
 namespace audunru\DynamicCors\Middleware;
 
 use Closure;
+use Illuminate\Http\Request;
 use Illuminate\Http\Middleware\HandleCors as MiddlewareHandleCors;
 
 /**
@@ -74,7 +75,7 @@ abstract class HandleCors extends MiddlewareHandleCors
      */
     protected ?bool $supportsCredentials;
 
-    public function handle($request, Closure $next)
+    public function handle(Request $request, Closure $next)
     {
         $this->setCorsOptions();
 
