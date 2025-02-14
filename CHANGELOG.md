@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/audunru/dynamic-cors/compare/v1.0.2...v1.0.3) (2025-02-14)
+
+
+### Miscellaneous Chores
+
+* **deps:** bump spatie/laravel-package-tools from 1.16.4 to 1.19.0 ([#12](https://github.com/audunru/dynamic-cors/issues/12)) ([5983e98](https://github.com/audunru/dynamic-cors/commit/5983e9882caece95208e6e2b0dfb34015364fda8))
+
 ## [1.0.2](https://github.com/audunru/dynamic-cors/compare/v1.0.1...v1.0.2) (2025-02-01)
 
 
