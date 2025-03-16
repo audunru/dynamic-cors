@@ -3,3 +3,4 @@
 build/logs/clover.xml
 .DS_Store
 .vscode
+.idea
