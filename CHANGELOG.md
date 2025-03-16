@@ -1,5 +1,21 @@
 # Changelog
 
+## [2.0.0](https://github.com/audunru/dynamic-cors/compare/v1.0.4...v2.0.0) (2025-03-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* laravel 12 support ([#24](https://github.com/audunru/dynamic-cors/issues/24))
+
+### Features
+
+* laravel 12 support ([#24](https://github.com/audunru/dynamic-cors/issues/24)) ([b96faf1](https://github.com/audunru/dynamic-cors/commit/b96faf10db3d3cf26819a8a2af651cceb1a969b5))
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump friendsofphp/php-cs-fixer ([#20](https://github.com/audunru/dynamic-cors/issues/20)) ([f882d58](https://github.com/audunru/dynamic-cors/commit/f882d58451db0ac9d1d3f2d4f3dd54ec0e85e8fd))
+
 ## [1.0.4](https://github.com/audunru/dynamic-cors/compare/v1.0.3...v1.0.4) (2025-03-07)
 
 
