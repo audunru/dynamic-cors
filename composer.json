@@ -15,12 +15,12 @@
   ],
   "require": {
     "php": "^8.2",
-    "laravel/framework": "^11.0",
+    "laravel/framework": "^12.0",
     "spatie/laravel-package-tools": "^1.9"
   },
   "require-dev": {
     "friendsofphp/php-cs-fixer": "^3.0",
-    "orchestra/testbench": "^9.0",
+    "orchestra/testbench": "^10.0",
     "php-coveralls/php-coveralls": "^2.2",
     "phpmd/phpmd": "^2.10",
     "phpunit/phpunit": "^11.0",
