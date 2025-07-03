@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.2](https://github.com/audunru/dynamic-cors/compare/v2.0.1...v2.0.2) (2025-07-03)
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump the development-dependencies group with 3 updates ([#34](https://github.com/audunru/dynamic-cors/issues/34)) ([544bdda](https://github.com/audunru/dynamic-cors/commit/544bddaa2468a91bef08556848f4623249516889))
+* **deps:** bump laravel/framework in the production-dependencies group ([#33](https://github.com/audunru/dynamic-cors/issues/33)) ([7a06de0](https://github.com/audunru/dynamic-cors/commit/7a06de03361b368797d765d5b258147e655cb78f))
+
 ## [2.0.1](https://github.com/audunru/dynamic-cors/compare/v2.0.0...v2.0.1) (2025-06-07)
 
 
