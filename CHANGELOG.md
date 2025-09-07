@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.0.2](https://github.com/audunru/dynamic-cors/compare/v2.0.1...v2.0.2) (2025-09-07)
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump friendsofphp/php-cs-fixer ([#37](https://github.com/audunru/dynamic-cors/issues/37)) ([9f792f1](https://github.com/audunru/dynamic-cors/commit/9f792f1eaea7675d1cf3c2f535142dc023878d75))
+* **deps-dev:** bump the development-dependencies group with 3 updates ([#34](https://github.com/audunru/dynamic-cors/issues/34)) ([544bdda](https://github.com/audunru/dynamic-cors/commit/544bddaa2468a91bef08556848f4623249516889))
+* **deps-dev:** bump the development-dependencies group with 3 updates ([#38](https://github.com/audunru/dynamic-cors/issues/38)) ([eb27991](https://github.com/audunru/dynamic-cors/commit/eb27991e9fbeaa7dd3429c00d57b3c5ccae2eab2))
+* **deps:** bump laravel/framework in the production-dependencies group ([#33](https://github.com/audunru/dynamic-cors/issues/33)) ([7a06de0](https://github.com/audunru/dynamic-cors/commit/7a06de03361b368797d765d5b258147e655cb78f))
+* **deps:** bump laravel/framework in the production-dependencies group ([#39](https://github.com/audunru/dynamic-cors/issues/39)) ([16c3a1b](https://github.com/audunru/dynamic-cors/commit/16c3a1bf51d5205ccb793524c41363411e223902))
+* **deps:** bump the production-dependencies group with 2 updates ([#36](https://github.com/audunru/dynamic-cors/issues/36)) ([649a036](https://github.com/audunru/dynamic-cors/commit/649a036916b2f1e34761dd6567eff43ed9ce3af8))
+
 ## [2.0.1](https://github.com/audunru/dynamic-cors/compare/v2.0.0...v2.0.1) (2025-06-07)
 
 
