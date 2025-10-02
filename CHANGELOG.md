@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.3](https://github.com/audunru/dynamic-cors/compare/v2.0.2...v2.0.3) (2025-10-02)
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump friendsofphp/php-cs-fixer ([#45](https://github.com/audunru/dynamic-cors/issues/45)) ([db49121](https://github.com/audunru/dynamic-cors/commit/db49121f03b5bcfd98adf59ce609a476944cefc6))
+* **deps:** bump laravel/framework in the production-dependencies group ([#44](https://github.com/audunru/dynamic-cors/issues/44)) ([3c9b2c9](https://github.com/audunru/dynamic-cors/commit/3c9b2c9ff50939348f6245d530cf064d05d19a3a))
+
 ## [2.0.2](https://github.com/audunru/dynamic-cors/compare/v2.0.1...v2.0.2) (2025-09-16)
 
 
