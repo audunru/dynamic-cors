@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.5](https://github.com/audunru/dynamic-cors/compare/v2.0.4...v2.0.5) (2025-11-13)
+
+
+### Miscellaneous Chores
+
+* **deps:** bump symfony/http-foundation from 7.3.5 to 7.3.7 ([#50](https://github.com/audunru/dynamic-cors/issues/50)) ([d4572bb](https://github.com/audunru/dynamic-cors/commit/d4572bb0e5bb280deb656a7ae29d0db8a32bc009))
+
 ## [2.0.4](https://github.com/audunru/dynamic-cors/compare/v2.0.3...v2.0.4) (2025-11-08)
 
 
