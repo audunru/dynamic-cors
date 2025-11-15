@@ -1,3 +1,10 @@
+## [2.0.6](https://github.com/audunru/dynamic-cors/compare/v2.0.5...v2.0.6) (2025-11-15)
+
+
+### Bug Fixes
+
+* force semantic release ([15b66ed](https://github.com/audunru/dynamic-cors/commit/15b66edfabd9add123c8f6e2179bfd17707fc1ff))
+
 # Changelog
 
 ## [2.0.4](https://github.com/audunru/dynamic-cors/compare/v2.0.3...v2.0.4) (2025-11-08)
